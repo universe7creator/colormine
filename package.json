@@ -1,0 +1,17 @@
+{
+  "name": "colormine",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Professional color palette generator & WCAG contrast checker",
+  "main": "api/process.js",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "vercel-build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "culori": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

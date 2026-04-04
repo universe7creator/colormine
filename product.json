@@ -1,0 +1,25 @@
+{
+  "name": "ColorMine",
+  "slug": "colormine",
+  "tagline": "Professional Color Palette Generator & WCAG Contrast Checker",
+  "description": "Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats. One tool for all your color needs.",
+  "price": "29",
+  "price_cents": 2900,
+  "features": [
+    "7 color harmony rules",
+    "WCAG AA/AAA contrast checking",
+    "OKLCH/CIELAB color space support",
+    "6 export formats (CSS, SCSS, JSON, Tailwind, Swift, Kotlin)",
+    "Random palette with seed",
+    "Color accessibility analysis"
+  ],
+  "tech_stack": "Vercel Edge Functions + culori",
+  "status": "building",
+  "vercel_url": null,
+  "github_url": null,
+  "lemonsqueezy_checkout_url": null,
+  "lemonsqueezy_product_id": null,
+  "webhook_url": null,
+  "created_cycle": 331,
+  "deployed_cycle": null
+}
