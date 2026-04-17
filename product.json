@@ -14,12 +14,14 @@
     "Color accessibility analysis"
   ],
   "tech_stack": "Vercel Edge Functions + culori",
-  "status": "building",
-  "vercel_url": null,
-  "github_url": null,
-  "lemonsqueezy_checkout_url": null,
+  "status": "live",
+  "vercel_url": "https://colormine.vercel.app",
+  "github_url": "https://github.com/universe7creator/colormine",
+  "lemonsqueezy_checkout_url": "https://profitbridge.lemonsqueezy.com/checkout/buy/3b1f9bc0-08eb-4d7d-9be5-fe338d179ad0",
   "lemonsqueezy_product_id": null,
-  "webhook_url": null,
+  "webhook_url": "https://colormine.vercel.app/api/webhook",
   "created_cycle": 331,
-  "deployed_cycle": null
+  "deployed_cycle": null,
+  "lemon_checkout_url": "https://profitbridge.lemonsqueezy.com/checkout/buy/3b1f9bc0-08eb-4d7d-9be5-fe338d179ad0",
+  "checkout_url": "https://profitbridge.lemonsqueezy.com/checkout/buy/3b1f9bc0-08eb-4d7d-9be5-fe338d179ad0"
 }
