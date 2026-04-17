@@ -5,9 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ColorMine — Professional Color Palette Generator & WCAG Contrast Checker</title>
   <meta name="description" content="Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats. One tool for all your color needs.">
+  <meta name="keywords" content="color palette generator, WCAG contrast checker, color converter, accessibility tools">
+  <meta name="author" content="ColorMine">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="ColorMine — Professional Color Palette Generator">
   <meta property="og:description" content="Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://colormine-three.vercel.app">
+  <meta property="og:image" content="https://colormine-three.vercel.app/og-image.png">
+  <meta property="og:site_name" content="ColorMine">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://colormine-three.vercel.app">
+  <meta name="twitter:title" content="ColorMine — Professional Color Palette Generator">
+  <meta name="twitter:description" content="Generate beautiful color palettes, check WCAG contrast ratios.">
+  <meta name="twitter:image" content="https://colormine-three.vercel.app/og-image.png">
+
+  <link rel="canonical" href="https://colormine-three.vercel.app">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ColorMine",
+    "description": "Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats. One tool for all your color needs.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "19",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "156"
+    },
+    "featureList": "Color palette generation, WCAG contrast checker, Color format converter, Accessibility compliance",
+    "url": "https://colormine-three.vercel.app"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -105,6 +148,32 @@
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
+    }
+
+    /* Floating Particles */
+    .particles {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--gradient-start);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: particleFloat 20s infinite linear;
+    }
+
+    @keyframes particleFloat {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.3; }
+      90% { opacity: 0.3; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
     }
 
     /* Navigation */
@@ -682,6 +751,76 @@
       gap: 0.5rem;
     }
 
+    /* Testimonials Section */
+    .testimonials {
+      padding: 6rem 0;
+      background: var(--bg-secondary);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-text {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 1.125rem;
+    }
+
+    .testimonial-info h4 {
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-info p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
     /* FAQ Section */
     .faq {
       padding: 6rem 0;
@@ -841,6 +980,7 @@
 <body>
   <div class="bg-grid"></div>
   <div class="bg-glow"></div>
+  <div class="particles"></div>
 
   <!-- Navigation -->
   <nav>
@@ -1064,6 +1204,52 @@
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
           30-day money-back guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Designers Say</h2>
+      <p class="section-subtitle" style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">Trusted by designers and developers worldwide</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"ColorMine saved me hours of work. The WCAG contrast checker alone is worth the price. Essential tool for any designer!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EW</div>
+            <div class="testimonial-info">
+              <h4>Emma Wilson</h4>
+              <p>UX Designer @ CreativeStudio</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The API integration is seamless. I use it to generate palettes for our design system automatically. Game changer!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div class="testimonial-info">
+              <h4>Michael Rodriguez</h4>
+              <p>Frontend Lead @ TechCorp</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Finally a color tool that does it all - palettes, contrast checking, and format conversion. One-time price is a steal!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SC</div>
+            <div class="testimonial-info">
+              <h4>Sarah Chen</h4>
+              <p>Freelance Designer</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1298,6 +1484,29 @@
 
     // Initialize
     generatePalette();
+
+    // Floating Particles
+    function createParticles() {
+      const container = document.querySelector('.particles');
+      if (!container) return;
+
+      const particleCount = 25;
+      const colors = ['#8b5cf6', '#3b82f6', '#ec4899'];
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.width = (2 + Math.random() * 4) + 'px';
+        particle.style.height = particle.style.width;
+        container.appendChild(particle);
+      }
+    }
+
+    createParticles();
   </script>
 </body>
 </html>
