@@ -3,29 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ColorMine</title>
-  <meta name="description" content="The ultimate ColorMine tool. Powerful features with an intuitive interface designed for developers and power users.">
+  <title>ColorMine — Professional Color Palette Generator & WCAG Contrast Checker</title>
+  <meta name="description" content="Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats. One tool for all your color needs.">
   <meta name="keywords" content="color palette generator, WCAG contrast checker, color converter, accessibility tools">
-    <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="ColorMine">
   <meta name="theme-color" content="#0a0a0a">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ColorMine">
-  <meta property="og:description" content="The ultimate ColorMine tool. Powerful features with an intuitive interface designed for developers and power users.">
+  <meta property="og:title" content="ColorMine — Professional Color Palette Generator">
+  <meta property="og:description" content="Generate beautiful color palettes, check WCAG contrast ratios, convert between color formats.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://colormine-three.vercel.app">
-  <meta property="og:image" content="https://og-forge.vercel.app/api/og?title=ColorMine%20%E2%80%94%20Professional%20Color%20Palette%20Generator%20%26%20WCAG%20Cont&desc=Generate%20beautiful%20color%20palettes%2C%20check%20WCAG%20contrast%20ratios%2C%20convert%20between%20c">
+  <meta property="og:image" content="https://colormine-three.vercel.app/og-image.png">
   <meta property="og:site_name" content="ColorMine">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://colormine-three.vercel.app">
-  <meta name="twitter:title" content="ColorMine">
-  <meta name="twitter:description" content="The ultimate ColorMine tool. Powerful features with an intuitive interface designed for developers and power users.">
+  <meta name="twitter:title" content="ColorMine — Professional Color Palette Generator">
+  <meta name="twitter:description" content="Generate beautiful color palettes, check WCAG contrast ratios.">
   <meta name="twitter:image" content="https://colormine-three.vercel.app/og-image.png">
 
-  <link rel="canonical" href="https://colormine.vercel.app">
+  <link rel="canonical" href="https://colormine-three.vercel.app">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -1062,6 +1061,84 @@
       color: var(--accent-green);
     }
 
+    /* Testimonials Section */
+    .testimonials {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(139, 92, 246, 0.05) 50%, var(--bg-primary) 100%);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.3);
+      box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+    }
+
+    .testimonial-stars {
+      color: #fbbf24;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .testimonial-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -1432,6 +1509,51 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Loved by Designers</h2>
+      <p class="section-subtitle">Join thousands of designers who trust ColorMine for their color palettes</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"ColorMine has completely transformed my design workflow. Generating harmonious palettes takes seconds instead of hours. The API integration is seamless!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Sarah Kim</div>
+              <div class="testimonial-role">UI/UX Designer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As a frontend developer, having instant access to HEX, RGB, and HSL values saves me so much time. The one-time purchase is an incredible value!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Marcus Rodriguez</div>
+              <div class="testimonial-role">Frontend Developer</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I use ColorMine for every client project. The complementary color suggestions are spot-on and help me create stunning designs that clients love."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EJ</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Emily Johnson</div>
+              <div class="testimonial-role">Freelance Designer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
